@@ -3,7 +3,8 @@ create table players(
     TeamID		int,
     FirstName	varchar(255),
     LastName	varchar(255),
-    Position	varchar(2), # Needs work
+    Position	varchar(2),
+    CONSTRAINT chk_Position CHECK (Result IN ('QB', 'RB', 'WR')),
     Touchdowns	int,
     TotalYards	int,
     Salary		int,
@@ -14,7 +15,8 @@ create table games(
 	GameID		int,
     Date		DATE,
     Stadium		varchar(255),
-    Result		varchar(1), # Needs work
+    Result		varchar(1),
+    CONSTRAINT chk_Result CHECK (Result IN ('W', 'L', 'T')),
     Attendance	int,
     TicketRevenue int,
     primary key (GameID));
