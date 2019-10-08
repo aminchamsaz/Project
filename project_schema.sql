@@ -4,7 +4,7 @@ create table players(
     FirstName	varchar(255),
     LastName	varchar(255),
     Position	varchar(2),
-    CONSTRAINT chk_Position CHECK (Result IN ('QB', 'RB', 'WR')),
+    CONSTRAINT chk_Position CHECK (Position IN ('QB', 'RB', 'WR')),
     Touchdowns	int,
     TotalYards	int,
     Salary		int,
